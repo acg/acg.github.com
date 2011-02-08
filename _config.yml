@@ -1,3 +1,10 @@
+url: http://acg.github.com
+
+author:
+  name: Alan
+  email: alangrow+maelstrom@gmail.com
+  disqus: alangrow
+
 safe:        false
 auto:        false
 server:      false
@@ -38,6 +45,3 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
-author:
-  name: Alan
-  email: alangrow+maelstrom@gmail.com

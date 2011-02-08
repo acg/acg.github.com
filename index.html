@@ -11,7 +11,7 @@ root: .
   {{ post.content }}
   </div>
   <hr/>
-  <em>Posted by <a href="mailto:{{ site.author.email | escape }}">{{ site.author.name | escape }}</a> on {{ post.date | date: "%A, %B %d, %Y" }}.</em> <a href="{{ page.root }}{{ post.url | escape }}#comments">(Discuss)</a> 
+  <em>Posted by <a href="mailto:{{ site.author.email | escape }}">{{ site.author.name | escape }}</a> on {{ post.date | date: "%A, %B %d, %Y %Z" }}.</em> <a href="{{ page.root }}{{ post.url | escape }}#comments">(Discuss)</a> 
 </div> <!-- #post -->
 {% endfor %}
 

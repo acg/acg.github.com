@@ -1,11 +1,11 @@
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'alangrow'; // required: replace example with your forum shortname
+    var disqus_shortname = '{{ site.author.disqus | escape }}'; // required: replace example with your forum shortname
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    // var disqus_url = 'http://example.com/permalink-to-page.html';
+    var disqus_url = '{{ site.url | escape }}{{ page.url | escape }}';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
