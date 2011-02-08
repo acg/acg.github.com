@@ -2,11 +2,11 @@ title: Maelstrom
 url: "http://acg.github.com"
 description: "A gradual and wondrous descent into the vortex of code, augmented, in the due course of things, by various other bits of whirling garbage."
 lang: en-us
+disqus: maelstrom
 
 author:
   name: Alan
   email: alangrow+maelstrom@gmail.com
-  disqus: alangrow
 
 safe:        false
 auto:        false
