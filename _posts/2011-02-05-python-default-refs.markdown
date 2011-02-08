@@ -32,7 +32,7 @@ sub hashcopy
 {
   my $src = shift;
   my $dst = shift || {};
-  %$dst = %$src;
+  %$dst = (%$dst, %$src);
   return $dst;
 }
 {% endhighlight %}
