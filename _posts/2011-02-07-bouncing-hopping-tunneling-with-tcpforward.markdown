@@ -22,21 +22,27 @@ If your friend is savvy enough to compile it, and you've got time for that, you 
 
 The lowest-hassle option I can think of is to use tcpforward. Suppose you and your friend can both reach a 3rd machine, a public server you own called *moon*.
 
-Arrange for your friend to run the following tcpforward command:
+Run the following on moon:
 
 {% highlight bash %}
-./tcpforward -v -N 1 -l moon:9922 -c localhost:22
+tcpforward -v -N 1 -l moon:9922 -l moon:9921
+{% endhighlight %}
+
+Arrange for your friend to run the following on his local machine:
+
+{% highlight bash %}
+./tcpforward -v -N 1 -c moon:9922 -c localhost:22
 {% endhighlight %}
 
 Now, on your machine, run:
 
 {% highlight bash %}
-ssh -p 9922 moon
+ssh -p 9921 moon
 {% endhighlight %}
 
 And voila, your SSH connection is forwarded past your friend's NAT, to his machine. The <code>-N 1</code> option makes this a one-shot connection. The <code>-v</code> option gives him something to watch while you go to work -- some realtime transfer statistics.
 
-(This example assumes port 9922 is open on *moon*, and that your friend is running sshd).
+(This example assumes port 9921 and 9922 are open on *moon*, and that your friend is running sshd).
 
 <span id="hopping"></span> 
 ### Scenario: Hopping Over the Middleman ###
@@ -60,7 +66,7 @@ scp -o Port=9922 somefile gateway:somefile
 Or, rsync:
 
 {% highlight bash %}
-rsync -e "ssh -p 9922" somedir/ gateway:somedir/
+rsync -e "ssh -p 9922" -avzp somedir/ gateway:somedir/
 {% endhighlight %}
 
 Remember to kill the tcpforward session on *gateway*, or your sysadmin may get angry, annoyed, frightened, or all of the above.
