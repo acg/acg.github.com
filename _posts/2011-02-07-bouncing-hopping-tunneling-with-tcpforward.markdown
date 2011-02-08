@@ -22,7 +22,7 @@ If your friend is savvy enough to compile it, and you've got time for that, you 
 
 The lowest-hassle option I can think of is to use tcpforward. Suppose you and your friend can both reach a 3rd machine, a public server you own called *moon*.
 
-Run the following on moon:
+Run the following on *moon*:
 
 {% highlight bash %}
 tcpforward -v -N 1 -l moon:9922 -l moon:9921
@@ -103,7 +103,7 @@ How does it work?
 
 Well, you always run `tcpforward` with two arguments that specify a pair of TCP sockets to set up, then copy bytes between. Each socket argument is either a listen / accept socket -- if you specify the `-l` flag -- or a connect socket, if you specify the `-c` flag. Once both sockets of a pair are accepted or connected, a little async I/O copy loop runs until both sockets close for reading. If you pass the `-k` flag, the I/O copy loop runs in a forked process and another socket pair is immediately ready for setup.
 
-There's more documentation in the POD.
+There's more documentation in the [POD](https://github.com/acg/tcpforward/blob/master/README.md).
 
 Happy connection hacking!
 
