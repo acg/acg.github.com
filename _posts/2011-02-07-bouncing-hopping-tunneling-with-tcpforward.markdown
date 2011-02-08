@@ -8,7 +8,7 @@ This weekend I dusted off a little network utility of mine called [tcpforward](h
 
 <ul class="toc">
   <li><a href="#bouncing">Scenario: Remote Assistance, AKA "Bouncing Your Signal Off The Moon"</a></li>
-  <li><a href="#hopping">Scenario: Hopping Past the Middleman</a></li>
+  <li><a href="#hopping">Scenario: Hopping Over the Middleman</a></li>
   <li><a href="#tunneling">Scenario: Tunneling Through Corporate Firewalls </a></li>
   <li><a href="#how-it-works">How it Works</a></li>
 </ul>
@@ -39,9 +39,9 @@ And voila, your SSH connection is forwarded past your friend's NAT, to his machi
 (This example assumes port 9922 is open on *moon*, and that your friend is running sshd).
 
 <span id="hopping"></span> 
-### Scenario: Hopping Past the Middleman ###
+### Scenario: Hopping Over the Middleman ###
 
-Ever wanted to copy files to a machine you could only reach from a third machine? For no particular reason, let's call these machines *production* and *gateway*. I bet you usually end up scp'ing or rsync'ing files to *gateway*, ssh'ing to *gateway*, then running scp or rsync again, then cleaning up the files, etc.
+Ever wanted to copy files to a machine you could only reach from an intermediate machine? For no particular reason, let's call these machines *production* and *gateway*. I bet you usually end up scp'ing or rsync'ing files to *gateway*, ssh'ing to *gateway*, then running scp or rsync again, then cleaning up the files, etc.
 
 "There must be a better way!" I hear you scream.
 
@@ -76,7 +76,7 @@ You could run `hts` from [httptunnel](http://www.nocrew.org/software/httptunnel.
 
 Alternately, let's say you're not running anything on *freedom:443*. Most corporate firewalls will allow https out, and most of them don't do deep packet inspection to verify that the initial handshake actually conforms to the TLS protocol.
 
-Before you go to work, run the following on *freedom*:
+Before going off to work, run the following on *freedom*:
 
 {% highlight bash %}
 tcpforward -v -k -l 0.0.0.0:443 -c localhost:22
@@ -95,7 +95,7 @@ The time has come to pull back the curtain, revealing the wizened figure of a [1
 
 How does it work?
 
-Well, you always run `tcpforward` with two arguments that specify a pair of TCP sockets to set up, then copy bytes between. Each socket argument is either a listen / accept socket -- if you specify the `-l` flag -- or a connect socket, if you specify the `-c` flag. Once both sockets of a pair are accepted or connected, a little async I/O copy loop runs until both sockets close for writing. If you pass the `-k` flag, the I/O copy loop runs in a forked process and another socket pair is immediately ready for setup.
+Well, you always run `tcpforward` with two arguments that specify a pair of TCP sockets to set up, then copy bytes between. Each socket argument is either a listen / accept socket -- if you specify the `-l` flag -- or a connect socket, if you specify the `-c` flag. Once both sockets of a pair are accepted or connected, a little async I/O copy loop runs until both sockets close for reading. If you pass the `-k` flag, the I/O copy loop runs in a forked process and another socket pair is immediately ready for setup.
 
 There's more documentation in the POD.
 
