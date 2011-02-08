@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Thinkpad T43 Removal, Assembly"
+title: "Thinkpad T43 Key Removal, Assembly"
 root: ../../..
 ---
 
