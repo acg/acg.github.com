@@ -11,7 +11,11 @@
           <div class="content">
           {{ content }}
           </div>
-          <em>Posted on {{ page.date | date: "%A, %B %d, %Y" }}.</em>
+          <em>Posted by <a href="mailto:{{ site.author.email | escape }}">{{ site.author.name | escape }}</a> on {{ page.date | date: "%A, %B %d, %Y" }}.</em> <a href="#comments">(Discuss)</a>
+          <br/>
+          <a name="comments"></a>
+          <br/>
+          {{ include disqus.html }}
         </div>
       </div> <!-- .col1 -->
 
