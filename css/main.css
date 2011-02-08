@@ -103,6 +103,10 @@ h3 {
   color: #333;
 }
 
+.col3 li {
+  padding: 5px 0px;
+}
+
 /* center column */
 
 .col1 .toc {
@@ -112,7 +116,7 @@ h3 {
 /* Posts */
 
 .post {
-  padding: 10px 15px;
+  padding: 10px 15px 40px 15px;
 }
 
 .post .content {
@@ -137,6 +141,7 @@ h3 {
   margin: 10px 0px;
   border: 1px solid #666;
   background: #efefef;
+  white-space: pre-wrap;
 }
 
 .post code {
@@ -149,5 +154,13 @@ h3 {
   border: 1px solid #666;
   vertical-align: top;
   white-space: nowrap;
+}
+
+.post blockquote {
+  margin: 0px 20px;
+}
+
+.post .image {
+  margin: 10px 0px;
 }
 

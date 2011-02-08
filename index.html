@@ -4,7 +4,7 @@ title: Maelstrom
 root: .
 ---
 
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:2 %}
 <div class="post">
   <h2><a href="{{ page.root }}{{ post.url | escape }}">{{ post.title | escape }}</a></h2>
   <div class="content">
