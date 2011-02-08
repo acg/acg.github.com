@@ -8,11 +8,11 @@
       <div class="col1">
         <div class="post">
           <h2>{{ page.title | escape }}</h2>
-          <div class="top-date">{{ page.date | date: "%A, %B %d, %Y %Z" }}.</div>
+          <div class="top-date">{{ page.date | date: "%A, %B %d, %Y" }}.</div>
           <div class="content">
           {{ content }}
           </div>
-          <em>Posted by <a href="mailto:{{ site.author.email | escape }}">{{ site.author.name | escape }}</a> on {{ page.date | date: "%A, %B %d, %Y %Z" }}.</em> <a href="#comments">(Discuss)</a>
+          <em>Posted by <a href="mailto:{{ site.author.email | escape }}">{{ site.author.name | escape }}</a> on {{ page.date | date: "%A, %B %d, %Y" }}.</em> <a href="#comments">(Discuss)</a>
           <br/>
           <a name="comments"></a>
           <br/>
