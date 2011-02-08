@@ -19,13 +19,13 @@ Python 2.6.4
 ...
 >>> hashcopy({1:2,3:4})
 {1: 2, 3: 4}
->>> hashcopy({4:5,6:7})
-{1: 2, 3: 4, 4: 5, 6: 7}
+>>> hashcopy({5:6,7:8})
+{1: 2, 3: 4, 5: 6, 7: 8}
 {% endhighlight %}
 
 I haven't looked deeply into this, but it seems like default parameters must be bound to object instances at compile time.
 
-Perl gets away with this by defaulting parameters at runtime, so that hashref is always the freshest in the land:
+In Perl 5 you typically only set default parameters at runtime, so the empty hashref you get is always the freshest in the land:
 
 {% highlight perl %}
 sub hashcopy
