@@ -5,7 +5,7 @@ body {
 }
 
 #header {
-  height: 50px;
+  height: 60px;
   border-bottom: 1px solid black;
 }
 
@@ -28,6 +28,10 @@ body {
 #header h1 a:hover {
   color: #000;
   text-decoration: none;
+}
+
+#header .banner {
+  padding-top: 10px;
 }
 
 /* left column */
@@ -66,23 +70,37 @@ h2 {
 h3 {
   font-size: 16px;
   font-weight: bold;
-  margin: 15px 0px 10px 0px;
 }
 
-/* side columns */
+/* left column */
 
-.col2 p {
+.col2 blockquote {
   font-size: 12px;
   font-style: italic;
   padding: 10px 10px;
 }
 
+.col2 .caption {
+  font-size: 10px;
+  padding: 10px 10px;
+  color: #333;
+}
+
+/* right columns */
+
 .col3 {
-  padding: 10px;
+  padding: 10px 0px;
 }
 
 .col3 .date {
   font-size: 12px;
+  white-space: nowrap;
+}
+
+/* center column */
+
+.col1 .toc {
+  padding: 10px 0px;
 }
 
 /* Posts */
@@ -93,6 +111,11 @@ h3 {
 
 .post .content {
   padding: 10px 0px;
+}
+
+.post h3 {
+  margin: 15px 0px 10px 0px;
+  border-bottom: 1px solid #666;
 }
 
 .post p {
@@ -106,12 +129,18 @@ h3 {
 .post pre {
   padding: 10px 10px;
   margin: 10px 0px;
-  font-family: courier;
   border: 1px solid #666;
   background: #efefef;
 }
 
 .post code {
   background: #efefef;
+  font-family: courier;
+}
+
+.post p code {
+  padding: 1px 4px;
+  border: 1px solid #666;
+  vertical-align: top;
 }
 
