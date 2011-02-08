@@ -1,0 +1,3 @@
+all:
+	jekyll --pygments
+

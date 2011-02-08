@@ -1,0 +1,25 @@
+{% include begin.html %}
+{% include header.html %}
+
+<div class="colmask threecol">
+  <div class="colmid">
+    <div class="colleft">
+
+      <div class="col1">
+      {{ content }}
+      </div> <!-- .col1 -->
+
+      <div class="col2">
+      {% include leftcol.html %}
+      </div>  <!-- .col2 -->
+
+      <div class="col3">
+      {% include rightcol.html %}
+      </div> <!-- .col3 -->
+
+    </div> <!-- colleft -->
+  </div> <!-- colmid -->
+</div> <!-- colmask -->
+
+{% include footer.html %}
+{% include end.html %}

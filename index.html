@@ -1,0 +1,17 @@
+---
+layout: default
+title: Maelstrom
+root: .
+---
+
+{% for post in site.posts limit:5 %}
+<div class="post">
+  <h2><a href="{{ page.root }}{{ post.url | escape }}">{{ post.title | escape }}</a></h2>
+  <div class="content">
+  {{ post.content }}
+  </div>
+  <hr/>
+  <em>Posted on {{ post.date | date: "%A, %B %d, %Y" }}.</em>
+</div> <!-- #post -->
+{% endfor %}
+
