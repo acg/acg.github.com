@@ -143,12 +143,25 @@ h3 {
   padding-top: 4px;
 }
 
+.post ul {
+  margin: 0px 30px;
+}
+
+.post li {
+  list-style: disc;
+  padding: 5px 10px;
+}
+
 .post p {
   padding: 10px 0px;
 }
 
 .post em {
   font-style: italic;
+}
+
+.post strong {
+  font-weight: bold;
 }
 
 .post pre {
@@ -166,13 +179,14 @@ h3 {
 
 .post p code {
   padding: 1px 4px;
-  border: 1px solid #666;
   vertical-align: top;
   white-space: nowrap;
 }
 
 .post blockquote {
-  margin: 0px 20px;
+  margin: 0px 10px;
+  border-left: 10px solid #efefef;
+  padding-left: 10px;
 }
 
 .post .image {
