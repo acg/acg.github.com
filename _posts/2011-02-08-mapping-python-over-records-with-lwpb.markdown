@@ -10,7 +10,7 @@ In my work on [lwpb](https://github.com/acg/lwpb), a library which includes a [f
 
 The tool that emerged is [pbio](https://github.com/acg/lwpb/blob/python/python/pbio.py). It converts in both directions, and can also do some other things like extract a range of records. So far pretty pedestrian right?
 
-But with a mere [8 line patch](https://github.com/acg/lwpb/commit/a64f2f9eeb497cc83e66f4471ddd7ccdebb05c13), *pbio* has suddenly become immensely more useful: you can now map Python code supplied at the command line over your records, producing new calculated fields. This is a big step towards [MapReduce](http://en.wikipedia.org/wiki/MapReduce)-style programming, but without the overhead of having to write a separate script each time which defines a separate *map* function. Like all good coders, we're constantly looking for ways to write less code and still get the job done.
+But with a mere [8 line patch](https://github.com/acg/lwpb/commit/a64f2f9eeb497cc83e66f4471ddd7ccdebb05c13), *pbio* has suddenly become immensely more useful: you can now map Python code supplied at the command line over your records, producing new calculated fields. This is a big step towards [MapReduce](http://en.wikipedia.org/wiki/MapReduce)-style programming, but without the overhead of having to write a separate program each time which defines a separate *map* function. Like all good coders, we're constantly looking for ways to write less code and still get the job done.
 
 In the *pbio* case, there is **zero** overhead code required to calculate a new field, a surprising and mostly accidental consequence of [lwpb's](https://github.com/acg/lwpb) decision to encode and decode using dictionaries, together with a serendipitous feature of Python's `exec()` built-in. More on that in a second.
 
@@ -57,7 +57,7 @@ The input record, a dictionary, becomes the scope in which the user-supplied cod
 More complicated code is possible. For instance, here's `wc(1)`:
 
 {% highlight bash %}
-pbio.py -F 'lines,words,chars,url' -p schema.pb -m newco.Document < docs.pb -e '
+pbio.py -F 'lines,words,chars,url' -p schema.pb -m org.Document < docs.pb -e '
 chars=len(content)
 words=len(content.split())
 lines=len(content.split("\n"))'
