@@ -6,7 +6,7 @@ root: ../../..
 
 *The Ideal Git Law states that the documentation of git(1) will expand to fill all available volume.*
 
-I'm building a suite of record processing tools. Up to now, the development has taken place inside the [lwpb]() git repository. But it doesn't really belong there, since other record formats besides protobuf are supported: the classic unix tab-separated text format, and soon json.
+I'm building a suite of record processing tools. Up to now, the development has taken place inside the [lwpb](https://github.com/acg/lwpb) git repository. But it doesn't really belong there, since other record formats besides protobuf are supported: the classic unix tab-separated text format, and soon json.
 
 So how does one extract *part* of git repository into a new repository, preserving history where possible?
 
