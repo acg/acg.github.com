@@ -4,11 +4,11 @@ title: Teasing Out a New Git Repository
 root: ../../..
 ---
 
-*The Ideal Git Law states that the documentation of git(1) will expand to fill all available volume.*
+*The Ideal Git Law states that the documentation surrounding git(1) will expand to fill all available volume.*
 
 I'm building a suite of record processing tools. Up to now, the development has taken place inside the [lwpb](https://github.com/acg/lwpb) git repository. But it doesn't really belong there, since other record formats besides protobuf are supported: the classic unix tab-separated text format, and soon json.
 
-So how does one extract *part* of git repository into a new repository, preserving history where possible?
+So how does one extract *part* of a git repository into a new repository, preserving history where possible?
 
 All of the files I want to extract from the main repository live under the same subdirectory, which should become the top-level directory of the new repository. So a good place to start is this [stack overflow thread](http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository) which explains `git filter-branch --subdirectory-filter subdir`. It goes something like this:
 
