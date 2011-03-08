@@ -4,7 +4,7 @@ title: Maelstrom
 root: .
 ---
 
-{% for post in site.posts limit:2 %}
+{% for post in site.posts limit:3 %}
 <div class="post">
   <h2><a href="{{ page.root }}{{ post.url | escape }}">{{ post.title | escape }}</a></h2>
   <div class="top-date">{{ post.date | date: "%A, %B %d, %Y" }}.</div>
