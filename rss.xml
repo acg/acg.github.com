@@ -16,7 +16,7 @@ layout: nil
     {% for post in site.posts %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
-      <link>{{ site.url }}{{ post.url | xml_escape }}</link>
+      <link>{{ site.url }}{{ post.url | xml_escape }}?from=rss</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
       <author>{{ site.author.email }}({{ site.author.name }})</author>
       <guid>{{ site.url }}{{ post.id }}</guid>
