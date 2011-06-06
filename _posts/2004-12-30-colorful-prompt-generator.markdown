@@ -35,7 +35,7 @@ In the course of things, I discovered the `\t` bash escape sequence, which gives
 
 <div class="image">
 <a href="http://blogs.thegotonerd.com/maelstrom/images/bash-prompt-with-time.png">
-<img src="http://blogs.thegotonerd.com/maelstrom/images/bash-prompt-with-time-small.png" />
+<img src="/images/bash-prompt-with-time-small.png" />
 </a>
 </div>
 
