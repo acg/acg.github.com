@@ -4,7 +4,9 @@ title: Measuring the Measurers
 root: ../../..
 ---
 
-"Projects A and B are your top priority now. Oh, and Project C can't be impacted." Sound familiar?
+"Projects A and B are your top priority now. Oh, and Project C can't be impacted."
+
+Sound familiar?
 
 It's a common complaint of the project-managed: everything can't be top priority. Something has to give. Resources allocated to Project A must be deallocated from elsewhere, either Project C, or some other project. Declaring everything "top priority" is not helpful.
 
@@ -14,7 +16,7 @@ A friend of mine relates a story about a meeting between tech and client service
 
 Eventually, in frustration, the tech lead said, "Here's the list. You order it."
 
-The client services lead was taken aback and refused: "It all has to be done, as soon as you can do it."
+The client services lead was taken aback and refused: "It all has to be done. As soon as possible."
 
 Not helpful.
 
@@ -26,7 +28,7 @@ Now that we've turned a human being into a comparison operator ;) we can ask how
 
 Forget about [stable sort](http://en.wikipedia.org/wiki/Sorting_algorithm#Stability). Viewed as a [directed graph](http://en.wikipedia.org/wiki/Directed_graph), there will probably be cycles, like A &gt; B &gt; C &gt; A. In general, you can induce an acyclic digraph from a cyclic digraph by identifying the [strongly connected components](http://en.wikipedia.org/wiki/Strongly_connected_component). So one metric would be to compare the size of the induced acyclic graph to the original graph (`1/|V|` is the worst, `|V|/|V|=1.0` is the best). Another metric would be the height of the induced acyclic graph over the number of nodes (work items). A perfect comparison operator would produce a line of nodes in a well-defined order, and would score 1.0.
 
-Another thing to measure would be the consistency of the ordering over time. Yes, priorities change, but this also has a cost in terms of the resource re-allocation overhead.
+Another thing to measure would be the consistency of the ordering over time. Yes, priorities change, but resource re-allocation also has a cost.
 
-If anything, measuring the measurers seems like a good thing, for various reasons -- among them, that it exposes the often subtle problems of "conflicting directives". And not just to those asked to carry them out.
+Measuring the measurers seems like a good thing for a number of reasons. Among them, that it exposes the often subtle problems of *conflicting directives* and the even subtler problems of *competing directives*. Too often, only the people carrying out the directives are aware of them.
 
