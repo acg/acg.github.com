@@ -6,7 +6,7 @@ root: ../../..
 
 "Projects A and B are your top priority now. Oh, and Project C can't be impacted." Sound familiar?
 
-It's a common complaint of the project-managed: everything can't be top priority. Resources allocated to Project A must be deallocated from elsewhere, either Project C, or some other project. Declaring everything "top priority" is not helpful.
+It's a common complaint of the project-managed: everything can't be top priority. Something has to give. Resources allocated to Project A must be deallocated from elsewhere, either Project C, or some other project. Declaring everything "top priority" is not helpful.
 
 If project management accomplishes one thing, it should help each of us answer the question, "What should I work on next?"
 
