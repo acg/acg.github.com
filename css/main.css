@@ -143,13 +143,17 @@ h3 {
   padding-top: 4px;
 }
 
-.post ul {
+.post ul, .post ol {
   margin: 0px 30px;
 }
 
 .post li {
   list-style: disc;
-  padding: 5px 10px;
+  padding: 5px 30px;
+}
+
+.post ol li {
+  list-style: decimal;
 }
 
 .post p {
@@ -191,5 +195,27 @@ h3 {
 
 .post .image {
   margin: 10px 0px;
+}
+
+.post .matrix {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post .matrix td {
+  border: 1px solid gray;
+  padding: 4px 8px;
+}
+
+.post .matrix .col-header,
+.post .matrix .row-header {
+  background: #ddd;
+}
+
+.post .matrix .col-header.row-header {
+  border: none;
+  background: inherit;
 }
 
