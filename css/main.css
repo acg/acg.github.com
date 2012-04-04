@@ -131,8 +131,12 @@ h3 {
   padding: 10px 0px;
 }
 
-.post h3 {
+.post h3,
+.post h2 {
   margin: 15px 0px 10px 0px;
+}
+
+.post h3 {
   border-bottom: 1px solid #666;
 }
 
