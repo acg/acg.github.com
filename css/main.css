@@ -109,7 +109,7 @@ h3 {
 
 .col3 .feed .icon {
   display: inline-block;
-  background: url(../images/feed-icon-28x28.png) no-repeat 0 0;
+  background: url(/images/feed-icon-28x28.png) no-repeat 0 0;
   width: 28px;
   height: 28px;
   vertical-align: middle;
